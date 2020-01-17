@@ -330,6 +330,10 @@ tab k4,gen(OCU)
 	
 	use "${intdir}/PSI_hlnb2017_2018_final_set.dta",clear	
 		
+	foreach var in expectation80 expectation90 expectation100 {
+	replace `var'=`var'*100
+	}	
+	
 	global vars h3 expectation80 expectation90 expectation100 ///
 		d1 d2 a1 g1 c1 c2  a2 ///
 		e1 b2 e2a      ///
